@@ -22,8 +22,6 @@ public class steps {
     public WebDriver driver;
     public login login;
     public purchaseFlow flujoCompra;
-
-    //Variables reporte
     public static ExtentReports extent;
     public static ExtentTest test;
     public static ExtentSparkReporter spark;
@@ -93,9 +91,7 @@ public class steps {
 
     @Given("The user logs into the page")
     public void the_user_logs_into_the_page() {
-
         login.logueo();
-
     }
 
 

@@ -14,7 +14,7 @@ public class Reports {
     public static ExtentReports getInstance() {
         if (extent == null) {
             extent = new ExtentReports();
-            spark = new ExtentSparkReporter("report.html");  // Ruta del reporte
+            spark = new ExtentSparkReporter("report.html");
             extent.attachReporter(spark);
         }
         return extent;
