@@ -10,8 +10,14 @@ Feature: Purchace process on the page Demoblaze
     Then the user should see a confirmation message
 
     Examples:
-      | Usuario | Contraseña | Categoria | Productos      | Name    | Country  | City   | CreditCard     | Month | Year |
-      | test    | test       | Phones    | Sony xperia z5 | Michael | Colombia | Bogota | 42424242424242 | 12    | 2026 |
-      | admin   | admin      | Laptops   | MacBook Pro4   | Juan    | Peru     | Lima   | 42424242424242 | 12    | 2027 |
-      | 324234  | 233432     | Laptops   | MacBook Pro4   | Juan    | Peru     | Lima   | 42424242424242 | 12    | 2028 |
-      | 12345   | 12345      | Monitors  | ASUS Full HD   | Alberto | Chile    | NA     | 42424242424242 | 12    | 2029 |
+      | Usuario  | Contraseña | Categoria | Productos             | Name    | Country  | City   | CreditCard     | Month | Year |
+      | test     | test       | Phones    | Sony xperia z5        | Michael | Colombia | Bogota | 42424242424242 | 12    | 2026 |
+      | admin    | admin      | Phones    | Iphone 6 32gb         | Juan    | Mexico   | CDMX   | 42424242424242 | 12    | 2027 |
+      | admin123 | 123        | Laptops   | MacBook Pro           | Juan    | Peru     | Lima   | 42424242424242 | 12    | 2027 |
+      | admin    | admin      | Monitors  | Apple monitor 24      | Juan    | Peru     | Lima   | 42424242424242 | 12    | 2027 |
+      | 324234   | 233432     | Monitors  | ASUS Full HD          | Juan    | Peru     | Lima   | 42424242424242 | 12    | 2028 |
+      | 12345    | 12345      | Monitors  | PRODUCTO NO EXISTENTE | Alberto | Chile    | NA     | 42424242424242 | 12    | 2029 |
+
+    #Se generan varios casos de prueba en donde se agrega los diferentes tipos de productos y categorias
+    #Se agregan 4 casos exitosos y 2 con errores controlados
+    #(producto no encontrado/categoria no encontrada) -Logueo

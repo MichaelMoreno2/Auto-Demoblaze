@@ -54,7 +54,7 @@ public class login {
             alert = wait.until(ExpectedConditions.alertIsPresent());
             alert.accept();
             System.out.println("Error al iniciar sesión");
-            Assert.assertTrue("El producto no fue encontro", sesion);
+            Assert.assertTrue("Error al iniciar sesión", sesion);
 
         } catch (Exception e) {
 

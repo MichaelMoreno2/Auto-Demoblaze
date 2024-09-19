@@ -58,6 +58,7 @@ public class purchaseFlow {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
+    // Metodo donde se puede valida la seleccion del producto
     public void selectProduct(String product) {
         boolean productFound = false;
         try {
@@ -69,15 +70,14 @@ public class purchaseFlow {
                 productFound = true;
             } else {
                 System.out.println("no se encontro");
-
             }
         } catch (Exception e) {
-
-            Assert.assertTrue("El producto no fue encontro", productFound);
+            Assert.assertTrue("El producto no fue encontrado", productFound);
 
         }
     }
 
+    // Metodo donde se selecciona y se agrega el producto al carrito
     public void addProductCard() {
 
         wait.until(ExpectedConditions.visibilityOf(addToCartButton));
@@ -86,7 +86,7 @@ public class purchaseFlow {
         alert.accept();
 
     }
-
+    // Metodo donde se selecciona la categoria
     public void selectCategory(String category) {
         WebElement categoryOptions = driver.findElement(By.xpath("//a[.=\"" + category + "\"]"));
         categoryOptions.click();
@@ -94,6 +94,7 @@ public class purchaseFlow {
 
     }
 
+    // Metodo donde se selecciona la opcion de carrito
     public void selectCart() {
 
         showcartButton.click();
@@ -101,6 +102,7 @@ public class purchaseFlow {
         addtocartButton.click();
     }
 
+    //Metodo donde se agrega la informacion de la compra
     public void FillForm(String name, String country, String city, String creditCard, String month, String year) {
         nameField.sendKeys(name);
         countryField.sendKeys(country);
