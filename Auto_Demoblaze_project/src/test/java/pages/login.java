@@ -48,13 +48,16 @@ public class login {
 
     //Verifica si el usuario con el cual se esta iniciando sesion, es valido
     public void statusLogin() {
+        boolean sesion=false;
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
         try {
             alert = wait.until(ExpectedConditions.alertIsPresent());
             alert.accept();
             System.out.println("Error al iniciar sesión");
-            driver.quit();
+            Assert.assertTrue("El producto no fue encontro", sesion);
+
         } catch (Exception e) {
+
             System.out.println("Sesión iniciada");
 
         }
